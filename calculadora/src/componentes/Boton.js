@@ -7,9 +7,10 @@ export default function Boton(props) {
   };
   return (
     // le agregamos el manejador del evento onClick para que reaccione al presionar cada boton
-    <div className={`botonContenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
-    onClick={() => props.manejarClic(props.children)}> 
-        {props.children}
-    </div>
+    <button 
+      className={`botonContenedor ${esOperador(props.children) ? 'operador' : ''}`.trimEnd()}
+      onClick={() => props.manejarClic(props.children)}> 
+      {props.children}
+    </button>
   );
 }
